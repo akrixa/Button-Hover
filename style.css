@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #e6e6ef;
+}
+
+div{
+	position: absolute;
+	transform: translate(-50%, 50%);
+	left: 50%;
+	top: 50%;
+	display: flex;
+}
+
+div label input{
+	display: none; /*position: absolute, visibility: hidden;*/
+}
+
+div label span{
+	display: flex;
+	align-items: center;
+	padding: 0.25em 0.75em 0.25em 0.35em;
+	border-radius: 20px;
+	margin-left: 20px;
+	font-family: 'Lato', sans-serif;
+}
+
+div label span:before{
+	content: "";
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid black;
+	transition: all 0.3s ease;
+	background-color: #fff;
+	margin-right: 10px;
+}
+
+div label span:hover{
+	background-color: #d6d6e5;
+}
+
+label input:checked + span:before{
+	box-shadow: 0 0 0 6px #00005c inset;
+}
+
+label input:checked + span{
+	background-color: #d6d6e5;
+}
